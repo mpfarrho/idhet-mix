@@ -77,21 +77,6 @@ sig2_store <- save_ls$sig2_store
 
 F_vola <- apply(log(F_store[,,,"vola"]),c(2,3),median)
 
-# map covariances to correlations
-cor_store <- cov_store*NA
-for(hh in 1:dim(cov_store)[1]){
-  for(rr in 1:dim(cov_store)[4]){
-    tmp <- cov_store[hh,,,rr]
-    tmp_vars <- sqrt(diag(tmp))
-    cor_tmp <- (diag(1/tmp_vars)) %*% tmp %*% (diag(1/tmp_vars))
-    diag(cor_tmp) <- NA
-    
-    cor_tmp[cor_tmp>1] <- 0.99
-    cor_tmp[cor_tmp<(-1)] <- (-0.99)
-    cor_store[hh,,,rr] <- cor_tmp
-  }
-}
-
 # ------------------------------------------------------------------------
 # get variable names and decide on scaling
 varnames <- dimnames(irf_rs_store)[[2]]
