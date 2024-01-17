@@ -21,3 +21,5 @@ The individual R-source files are the following:
 - 'main_output.R' produces all charts shown in the paper from the collected MCMC draws
 
 The required MCMC estimation output 'mix_pub_exo_J30Q2sv_lev_facsv.rda' is available [here (Dropbox)](https://www.dropbox.com/scl/fi/bvmris93grldxn8y3tihx/mix_pub_exo_J30Q2sv_lev_facsv.rda?rlkey=bnwaqyq0vh9dlj1va05yo2qix&dl=0).
+
+This code comes without technical support of any kind. Please report any typos or errors to: mpfarrho@gmail.com. The code is free to use, provided that the paper is cited properly.
